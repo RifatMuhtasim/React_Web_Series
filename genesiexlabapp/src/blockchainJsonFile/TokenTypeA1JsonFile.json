@@ -1,0 +1,681 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "address payable",
+				"name": "_companyAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "_companyCode",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_name",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_tokens",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_companySecretKey",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_perTokenPrice",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_maximumAmountOfTokenOneCanBuy",
+				"type": "uint256"
+			}
+		],
+		"name": "AddCompany",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_companyAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_investorAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_companyId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_token",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_companyName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_companyCode",
+				"type": "string"
+			}
+		],
+		"name": "addInvestor",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_companyAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_investorAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "numOfTokenAdded",
+				"type": "uint256"
+			}
+		],
+		"name": "addTokenInPortfolio",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "companyId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "address payable",
+				"name": "companyAddress",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "companyCode",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "tokens",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "perTokenPrice",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "maximumAmountOfTokenOneCanBuy",
+				"type": "uint256"
+			}
+		],
+		"name": "companiesEvent",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address payable",
+				"name": "_fromInvestor",
+				"type": "address"
+			},
+			{
+				"internalType": "address payable",
+				"name": "_toInvestor",
+				"type": "address"
+			},
+			{
+				"internalType": "address payable",
+				"name": "_companyAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_numberOfTokenExchange",
+				"type": "uint256"
+			}
+		],
+		"name": "ExchangeTokens",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address payable",
+				"name": "_investorAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "address payable",
+				"name": "_companyAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_companyId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_numberOfTokenPurchased",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_companyName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_companyCode",
+				"type": "string"
+			}
+		],
+		"name": "InvestorPurchasedTokens",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "investorAddress",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "companyAddress",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "companyId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "numberOfTokenPurchased",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "companyName",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "companyCode",
+				"type": "string"
+			}
+		],
+		"name": "investorTokenInfoEvent",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_companyAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_investorAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "numOfTokenRemove",
+				"type": "uint256"
+			}
+		],
+		"name": "removeTokenFromPortfolio",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "companies",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "companyId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address payable",
+				"name": "companyAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "companyCode",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "tokens",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "perTokenPrice",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "maximumAmountOfTokenOneCanBuy",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "GetAllCompany",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "companyId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address payable",
+						"name": "companyAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "companyCode",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokens",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "perTokenPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "maximumAmountOfTokenOneCanBuy",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct TokenTypeA1FixedPriceExchangeContract.companiesStruct[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_companyAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "GetCompanyAllInvestor",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "investorAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "companyAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "companyId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "numberOfTokenPurchased",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "companyName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "companyCode",
+						"type": "string"
+					}
+				],
+				"internalType": "struct TokenTypeA1FixedPriceExchangeContract.investorTokenInfoStruct",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_companyAddress",
+				"type": "address"
+			}
+		],
+		"name": "GetCompanyAllInvestorLength",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_investorAddress",
+				"type": "address"
+			}
+		],
+		"name": "GetInvestorCompaniesLength",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_investorAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "GetInvestorCompany",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "investorAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "companyAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "companyId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "numberOfTokenPurchased",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "companyName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "companyCode",
+						"type": "string"
+					}
+				],
+				"internalType": "struct TokenTypeA1FixedPriceExchangeContract.investorTokenInfoStruct",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "investorTokenInfo",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "investorAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "companyAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "companyId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "numberOfTokenPurchased",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "companyName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "companyCode",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "isCompany",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_companyAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_investorAddress",
+				"type": "address"
+			}
+		],
+		"name": "isInvestor",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "isInvestorAlreadyListed",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_companyAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_investorAddress",
+				"type": "address"
+			}
+		],
+		"name": "retrieveInvestorToken",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "numberOfTokenPurchased",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]

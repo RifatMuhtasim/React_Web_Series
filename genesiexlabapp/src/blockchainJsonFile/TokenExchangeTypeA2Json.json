@@ -1,0 +1,747 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "address payable",
+				"name": "_companyAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "_companyCode",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_companyName",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_listedToken",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_maximumAmountOfTokenOneCanBuy",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_floorPrice",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_capPrice",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_secretKey",
+				"type": "uint256"
+			}
+		],
+		"name": "addTypeA2Company",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_companyId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_companyCode",
+				"type": "string"
+			},
+			{
+				"internalType": "address payable",
+				"name": "_companyAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "address payable",
+				"name": "_investorAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_numberOfTokenWantToPurchased",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_bidPrice",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_genFee",
+				"type": "uint256"
+			}
+		],
+		"name": "bidTokenOnA2Company",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"stateMutability": "payable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "_companyId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "companyCode",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "address payable",
+				"name": "companyAddress",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "address payable",
+				"name": "investorAddress",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "numberOfTokenWantToPurchased",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "bidPrice",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"name": "IPOInvestorStorageEvent",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address payable",
+				"name": "_companyAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_cutoffPrice",
+				"type": "uint256"
+			}
+		],
+		"name": "IPOTokenExchange",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "message",
+				"type": "string"
+			}
+		],
+		"name": "Log",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address payable",
+				"name": "_companyAddress",
+				"type": "address"
+			}
+		],
+		"name": "selectCutOffPrice",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "companyId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "address payable",
+				"name": "companyAddress",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "companyCode",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "companyName",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "listedToken",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "maximumAmountOfTokenOneCanBuy",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "floorPrice",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "capPrice",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"name": "typeA2CompanyEvent",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "addressOnBidPrice",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "cutoffPrice",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "extraTokenOnCutoff",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_investorAddress",
+				"type": "address"
+			}
+		],
+		"name": "getAllInvestorCompanyLength",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_investorAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "getAllInvestorToken",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address payable",
+						"name": "companyAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "companyId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address payable",
+						"name": "investorAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountOfTokens",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "companyCode",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "companyName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct TokenTypeA2.investorInfoStruct",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getAllTokenA2ListedCompany",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "companyId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address payable",
+						"name": "companyAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "companyCode",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "companyName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "listedToken",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "maximumAmountOfTokenOneCanBuy",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "floorPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "capPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct TokenTypeA2.typeA2CompanyStruct[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "investorAllCompanyList",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "investorInfo",
+		"outputs": [
+			{
+				"internalType": "address payable",
+				"name": "companyAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "companyId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address payable",
+				"name": "investorAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amountOfTokens",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "companyCode",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "companyName",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "IPOInvestorOnBidPrice",
+		"outputs": [
+			{
+				"internalType": "address payable",
+				"name": "investorAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "address payable",
+				"name": "companyAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "companyId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "companyCode",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "numberOfTokenWantToPurchased",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "bidPrice",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "isCompanyAlreadyListed",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "isCompanyCutOff",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "numberOftokenOnBidPrice",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "totalBidTokens",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "typeA2Company",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "companyId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address payable",
+				"name": "companyAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "companyCode",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "companyName",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "listedToken",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "maximumAmountOfTokenOneCanBuy",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "floorPrice",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "capPrice",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]

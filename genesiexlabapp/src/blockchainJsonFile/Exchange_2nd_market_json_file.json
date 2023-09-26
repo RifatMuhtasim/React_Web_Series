@@ -1,0 +1,536 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "address payable",
+				"name": "_company_address",
+				"type": "address"
+			},
+			{
+				"internalType": "address payable",
+				"name": "_ask_seller_address",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_number_of_token_want_to_sell",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_asking_price",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_company_name",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_company_id",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_company_code",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "_type_a1_contract_address",
+				"type": "address"
+			}
+		],
+		"name": "Ask_token",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address payable",
+				"name": "_company_address",
+				"type": "address"
+			},
+			{
+				"internalType": "address payable",
+				"name": "_bid_buyer_address",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_how_much_token_want_to_purchased",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_bid_buying_price",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_company_name",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_company_id",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_company_code",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "_type_a1_contract_address",
+				"type": "address"
+			}
+		],
+		"name": "Bid_token",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"stateMutability": "payable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "array_of_bid_buyer_in_this_price_range",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "ask_seller_info",
+		"outputs": [
+			{
+				"internalType": "address payable",
+				"name": "company_address",
+				"type": "address"
+			},
+			{
+				"internalType": "address payable",
+				"name": "investor_address",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "how_much_token_want_to_sell",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "ask_selling_price",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "bid_buyer_info",
+		"outputs": [
+			{
+				"internalType": "address payable",
+				"name": "company_address",
+				"type": "address"
+			},
+			{
+				"internalType": "address payable",
+				"name": "investor_address",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "how_much_token_want_to_purchased",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "bid_buying_price",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "highest_asking_price",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "highest_bidding_price",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_company_address",
+				"type": "address"
+			}
+		],
+		"name": "last_ex_price",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "last_exchange_price",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "lowest_asking_price",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "lowest_bidding_price",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "number_of_ask_token_on_price",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "number_of_bid_token_on_price",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "remaining_buying_token",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "remaining_selling_token",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_company_address",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_investor_address",
+				"type": "address"
+			}
+		],
+		"name": "remaining_token_for_buy",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_company_address",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_investor_address",
+				"type": "address"
+			}
+		],
+		"name": "remaining_token_for_sell",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_company_address",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_number_of_token_want_to_buy",
+				"type": "uint256"
+			}
+		],
+		"name": "View_instantly_buying_price",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_company_address",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_number_of_token_want_to_sell",
+				"type": "uint256"
+			}
+		],
+		"name": "View_instantly_selling_price",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
